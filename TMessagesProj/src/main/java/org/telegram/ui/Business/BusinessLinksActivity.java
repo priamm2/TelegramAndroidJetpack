@@ -91,7 +91,7 @@ public class BusinessLinksActivity extends UniversalFragment implements Notifica
         } else {
             builder = new AlertDialog.Builder(context, resourcesProvider);
         }
-        builder.setTitle(getString(R.string.BusinessLinksRenameTitle));
+        builder.setTitle(LocaleController.getString(R.string.BusinessLinksRenameTitle));
 
         final int MAX_NAME_LENGTH = 32;
         EditTextBoldCursor editText = new EditTextBoldCursor(context) {

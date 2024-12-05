@@ -118,7 +118,7 @@ public class BookmarksFragment extends UniversalFragment {
 //        }
         new AlertDialog.Builder(getContext(), getResourceProvider())
             .setTitle(formatPluralString("DeleteOptionsTitle", ids.size()))
-            .setMessage(getString(ids.size() == 1 ? "AreYouSureUnsaveSingleMessage" : "AreYouSureUnsaveFewMessages"))
+            .setMessage(LocaleController.getString(ids.size() == 1 ? "AreYouSureUnsaveSingleMessage" : "AreYouSureUnsaveFewMessages"))
             .setPositiveButton(getString(R.string.Delete), (di, w) -> {
                 final long selfId = UserConfig.getInstance(currentAccount).getClientUserId();
                 MessagesController.getInstance(currentAccount).deleteMessages(new ArrayList<>(ids), null, null, selfId, 0, true, 0);

@@ -771,10 +771,10 @@ public class ChatCustomReactionsEditActivity extends BaseFragment implements Not
         }
         if (hasChanges) {
             AlertDialog.Builder builder = new AlertDialog.Builder(getContext(), getResourceProvider());
-            builder.setTitle(getString("UnsavedChanges", R.string.UnsavedChanges));
-            String text = getString("ReactionApplyChangesDialog", R.string.ReactionApplyChangesDialog);
+            builder.setTitle(LocaleController.getString("UnsavedChanges", R.string.UnsavedChanges));
+            String text = LocaleController.getString("ReactionApplyChangesDialog", R.string.ReactionApplyChangesDialog);
             builder.setMessage(text);
-            builder.setPositiveButton(getString("ApplyTheme", R.string.ApplyTheme), (dialogInterface, i) -> {
+            builder.setPositiveButton(LocaleController.getString("ApplyTheme", R.string.ApplyTheme), (dialogInterface, i) -> {
                 actionButton.performClick();
             });
             builder.setNegativeButton(getString(R.string.Discard), (dialogInterface, i) -> finishFragment());

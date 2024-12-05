@@ -294,7 +294,7 @@ public class QuickRepliesActivity extends BaseFragment implements NotificationCe
         } else {
             builder = new AlertDialog.Builder(context, resourcesProvider);
         }
-        builder.setTitle(getString(currentReply == null && currentName == null ? R.string.BusinessRepliesNewTitle : R.string.BusinessRepliesEditTitle));
+        builder.setTitle(LocaleController.getString(currentReply == null && currentName == null ? R.string.BusinessRepliesNewTitle : R.string.BusinessRepliesEditTitle));
 
         final int MAX_NAME_LENGTH = 32;
         EditTextBoldCursor editText = new EditTextBoldCursor(context) {

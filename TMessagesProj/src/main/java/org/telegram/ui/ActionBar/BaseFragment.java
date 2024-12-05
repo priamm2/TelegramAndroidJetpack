@@ -34,6 +34,7 @@ import android.widget.FrameLayout;
 import androidx.annotation.CallSuper;
 import androidx.annotation.Nullable;
 import androidx.core.graphics.ColorUtils;
+import androidx.fragment.app.Fragment;
 
 import org.telegram.messenger.AccountInstance;
 import org.telegram.messenger.AndroidUtilities;
@@ -61,7 +62,7 @@ import org.telegram.ui.bots.BotWebViewAttachedSheet;
 
 import java.util.ArrayList;
 
-public abstract class BaseFragment {
+public abstract class BaseFragment extends Fragment {
 
     protected boolean isFinished;
     protected boolean finishing;
@@ -234,10 +235,6 @@ public abstract class BaseFragment {
 
     public View createView(Context context) {
         return null;
-    }
-
-    public Bundle getArguments() {
-        return arguments;
     }
 
     public int getCurrentAccount() {
@@ -493,6 +490,7 @@ public abstract class BaseFragment {
 
     @CallSuper
     public void onResume() {
+        super.onResume();
         isPaused = false;
         if (actionBar != null) {
             actionBar.onResume();
@@ -505,6 +503,7 @@ public abstract class BaseFragment {
 
     @CallSuper
     public void onPause() {
+        super.onPause();
         if (actionBar != null) {
             actionBar.onPause();
         }
@@ -547,7 +546,7 @@ public abstract class BaseFragment {
     }
 
     public void onConfigurationChanged(android.content.res.Configuration newConfig) {
-
+        super.onConfigurationChanged(newConfig);
     }
 
     public boolean onBackPressed() {
@@ -754,7 +753,7 @@ public abstract class BaseFragment {
     }
 
     public void onLowMemory() {
-
+        super.onLowMemory();
     }
 
     public Dialog showDialog(Dialog dialog) {
