@@ -857,7 +857,7 @@ public class SMSStatsActivity extends GradientHeaderActivity implements Notifica
                 textView.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
                 textView.setTextColor(Theme.getColor(Theme.key_dialogTextBlack));
                 textView.setTypeface(AndroidUtilities.bold());
-                textView.setText(getString(R.string.SmsHistoryTitle));
+                textView.setText(LocaleController.getString(R.string.SmsHistoryTitle));
                 addView(textView, LayoutHelper.createLinear(LayoutHelper.MATCH_PARENT, LayoutHelper.WRAP_CONTENT, Gravity.CENTER_HORIZONTAL, 50, 0, 50, 6));
 
                 textView = new TextView(context);
@@ -865,7 +865,7 @@ public class SMSStatsActivity extends GradientHeaderActivity implements Notifica
                 textView.setGravity(Gravity.CENTER);
                 textView.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
                 textView.setTextColor(Theme.getColor(Theme.key_dialogTextBlack));
-                textView.setText(AndroidUtilities.replaceTags(getString(R.string.SmsHistorySubtitle)));
+                textView.setText(AndroidUtilities.replaceTags(LocaleController.getString(R.string.SmsHistorySubtitle)));
                 textView.setLineSpacing(dp(2), 1f);
                 addView(textView, LayoutHelper.createLinear(LayoutHelper.MATCH_PARENT, LayoutHelper.WRAP_CONTENT, Gravity.CENTER_HORIZONTAL, 50, 0, 50, 20));
             }
